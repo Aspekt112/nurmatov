@@ -1,0 +1,265 @@
+// Place all the styles related to the about controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@font-face {
+    font-family:'PF Isotext Pro';
+    src: url(PFIsotextProRegular.ttf); 
+} 
+/* font_path("PFIsotextProRegular.ttf");*/
+
+body {
+	font: normal 17px/26px 'PF Isotext Pro','Helvetica Neue', Helvetica, Arial, sans-serif;
+	background: #0e0e0e;
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+	color: rgb(194, 195, 195);
+	cursor: default;
+	/*-webkit-user-select: none;*/
+	transition: all 0.5s;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #FF0800;
+	transition: all 0.5s;
+	background: none;
+}
+
+ul {
+	list-style: none;
+}
+
+.mainContainer {
+	position: relative;
+}
+.mainContainer div { 
+	position: absolute;
+}
+
+#leftContainer {
+	margin: 0;
+	width: 475px;
+	height: 950px;
+	background: url(leftContainer.png);
+	-moz-border-radius: 0px 0px 0px 50px;
+	-webkit-border-radius:  0px 0px 45px 0px;
+}
+
+.navigation {
+	margin-left: 2%;
+	padding: 3% 0 0 0;
+	width: 100%;
+	text-transform: uppercase;
+	border-bottom: 1px dashed #343434;
+}
+
+.navigation li {
+	width: 15%;
+	display: inline-block;
+	margin: 1%;
+	padding: 3%;
+}
+
+.navigation li a {
+	display: inline-block;
+	margin: 1%;
+	padding: 3%;
+	line-height: 15px;
+}
+
+#whatDo {
+	padding: 8px;
+	margin-top: 12%;
+}
+
+.content {
+	color: #c8c8c8;
+	padding-right: 38px;
+}
+
+.content h2 {
+	font-weight: bold;
+	font-size: 1.2em;
+	line-height: 2px;
+	margin-bottom: 4px;
+}
+
+.content ul#whatDo li {
+	padding-left: 55px;
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	margin-bottom: 15px;
+}
+
+.content ul#whatDo li p {
+	color: #adadad;
+	line-height: 15px;
+	font-size: 14px;
+	padding-bottom: 15px;
+	border-bottom: 1px solid #232323;
+}
+
+.content ul#whatDo li:last-child p {
+	border-bottom: 0;
+}
+
+.content ul#whatDo li:hover {
+	color: #e9e9e9;
+}
+
+.content ul#whatDo li:hover p {
+	color: #c2c2c2;
+}
+
+
+.content ul#whatDo li:hover a {
+	color: #FF0800;
+	cursor: auto;
+}
+
+.content li#study { background-image: url(image1.png); }
+.content li#read { background-image: url(image2.png); }
+.content li#fun { background-image: url(image3.png); }
+
+.content ul#whatDo li:hover { background-position: 0 -100px; }
+
+#diary {
+	padding: 8px 40px 40px 55px;
+	margin-top: 89%;
+}
+
+#diary p {
+	color: #adadad;
+	line-height: 18px;
+	font-size: 15px;
+	padding-bottom: 15px;
+	border-bottom: 1px solid #232323;
+}
+
+#diary a {
+	float: right;
+}
+
+#contact {
+	padding: 8px 40px 40px 0;
+	margin-top: 137%;
+	width: 90%;
+}
+#contact li a {
+	display: block;
+	color: black;
+	background: rgba(200, 200, 200, 0.4);
+	margin-bottom: 10px;
+	padding-left: 10px;
+}
+
+#contact li a:hover {
+	text-decoration: none;
+	color: white;
+	transition: all 0.5s;
+	background: rgba(120, 120, 120, 0.5);
+}
+
+
+
+/* --------------------------------- RIGHT SIDE ----------------------*/
+
+#rightContainer {
+	margin: 0 0 0 475px;
+	width: 60%;
+	height: 950px;
+	position: relative;
+	background: url(bg-right.png) no-repeat;
+} 
+
+.visible {
+	width: 90%;
+	color: rgb(194, 195, 195);
+	margin: 100px 0 0 0;
+	padding: 65px 40px 40px 40px;
+}
+
+.visible h1 {
+	text-align: center;
+}
+
+.visible p {
+	color: #c2c2c2;
+}
+
+.visible a {
+	background: rgba(200, 200, 200, 0.1);
+	padding: 3px 5px 2px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+}
+
+.visible a:hover {
+	background: none;
+}
+
+#social a {
+	background: none;
+}
+
+.visible img {
+	margin-left: 10px;
+	float: right;
+}
+
+.visible ul#contacts li {
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	margin-bottom: 15px;
+}
+
+.visible ul#contacts li img {
+	float: left;
+}
+
+.visible ul#contacts li p {
+	color: #adadad;
+}
+
+.visible ul#contacts li:hover p {
+	color: #c2c2c2;
+}
+
+
+.visible ul#contacts li:hover a {
+	color: #FF0800;
+	cursor: auto;
+}
+
+#index {
+	/*display: none;*/
+}
+
+#files {
+	/*display: none;*/
+}
+
+#diaryPage {
+	/*display: none;*/
+}
+
+#contactPage {
+	/*display: none;*/
+}
+
+footer p {
+	font-size: 0.8em;
+	margin: 0px;
+	padding: 2px 0px 2px 45px;
+	color: #717171;
+}
+.clearfix:after {
+	content: " ";
+	visibility: hidden;
+	display: block;
+	height: 0;
+	clear: both;
+}

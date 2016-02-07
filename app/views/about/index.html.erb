@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Артём Нурматов | Личный сайт</title>
+    <link rel="stylesheet" href="about.css.scss">
+
+<script type="text/javascript">
+        var pages = null;
+        $(document).ready(function(){
+            pages = $(".visible");
+            pages.css("display", "none");
+            pages[0].style.display = "";
+            $("a.nav").click(function () {
+                if ($(this).attr("name")) {};
+                // console.log(pages);
+                var destination = $(this).attr("name");
+                // var element = $("rightContainer");
+                // element.style.display = "";
+                // console.log(destination);
+                for (var i = pages.length - 1; i >= 0; i--) {
+                    if (pages[i].id == destination) {
+                        pages[i].style.display = "";
+                    } else {
+                        pages[i].style.display = "none";
+                    }
+                };
+                return false;
+            });
+        });
+</script>
+
+<body>
+<div class="mainContainer">
+    <div id="leftContainer">
+
+        <ul class="navigation">
+            <li><a href="" name="index" class="nav">Обо мне</a></li>
+            <li><a href="#" name="files">Файлы</a></li>
+            <li><%= link_to 'Дневник', articles_path %></li>
+            <li><a href="" name="contactPage" class="nav">Контакт</a></li>
+        </ul>
+        <div class="content">
+            <ul id="whatDo">
+                <li id="study">
+                    <h2>Учение</h2>
+                    <p>Я занимаюсь освоением сетевых технологий, веб-фреймворков и программированием на C. Подробнее об изученном мной можно прочесть в <a href="files/Nurmatov.pdf" target="_blank">CV</a>.</p>
+                </li>
+                <li id="read">
+                    <h2>Литература</h2>
+                    <p>Люблю получать и осваивать новые знания, а лучший способ для этого - чтение книг! Наибольшую симпатию я испытываю к человеческим взаимоотношениям и обожаю книги по психологии. Также увлекаюсь художественнной литературой.</p>
+                </li>
+                <li id="fun">
+                    <h2>Досуг</h2>
+                    <p>В свободное время слушаю аудиокниги и работаю над иностранными языками. А еще пилю вот этот вот сайтец =)</p>
+                </li>
+            </ul>
+        </div>
+
+        <div id="diary">
+            <p>В дневник я буду записывать все необычное и удивившее меня, важные мысли и мои переживания. В скором времени он станет доступен!</p>
+            <%= link_to 'К дневнику', articles_path %>
+        </div>
+
+        <div id="contact">
+            <ul>
+                <li><a href="mailto:atnurmatov@gmail.com" target="_blank">Почта</a></li>
+                <li><a href="http://vk.com/nurmatov" target="_blank">ВКонтакте</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div id="rightContainer">
+
+        <div class="clearfix visible" id="index">
+            <p>
+            Здравствуй! Меня зовут Артём. Я - студент 
+            <a href="http://www.bmstu.ru/" target="_blank">МГТУ им.Баумана</a>,
+            ищущий себя в 
+            <a href="http://en.wikipedia.org/wiki/Information_technology" target="_blank">IT</a>.
+            Здесь ты можешь узнать <a href="" name="index" class="nav">обо мне</a>, моих <a href="#">увлечениях</a> и <a href="#">целях</a>, к достижению которых я стремлюсь.
+            <br>
+            <br>
+            Этот ресурс был задуман как персональная страница и проект для самообучения одновременно. Если у тебя появятся идеи, как сделать страницу лучше - <a href="" name="contactPage" class="nav">свяжись со мной!</a>
+            <br>
+            <br>
+            Со временем здесь появится <a href="#" name="diaryPage">дневник</a>, хранилище <a href="#" name="files">файлов</a> и еще целая куча фееричной всячины =)
+            </p>
+        </div>
+
+        <div class="clearfix visible" id="files">
+            <p>************************************************************************************<br>Тут страница с файлами.<br>************************************************************************************</p>
+        </div>
+
+         <div class="clearfix visible" id="diaryPage">
+            <p>************************************************************************************<br>Тут страница с дневником.<br>************************************************************************************</p>
+        </div>
+
+        <div class="clearfix visible" id="contactPage">
+            <h1>ФАМИЛИЯ ИМЯ ОТЧЕСТВО</h1>
+            
+            <%= image_tag ("me.jpg") %>
+            <p>Связаться со мной можно по следующим контактам:</p>
+            <ul id="contacts">
+                <li id="location"><%= image_tag ("loc.png") %><p>Адрес: Москва, м. Измайловская</p></li>
+                <li id="teleNumber"><%= image_tag ("call.png") %><p>Телефон: +7(916) 712-80-87</p></li>
+                <li id="email"><%= image_tag ("mail.png") %><p>E-mail: <a href="mailto:atnurmatov@gmail.com">atnurmatov@gmail.com</a></p></li>
+                <li id="social">
+                    <h2>Сети</h2>
+                    <a href="http://vk.com/nurmatov" target="_blank"><%= image_tag ("vk.png") %></a>
+                    <a href="http://instagram.com/aspekt112/" target="_blank"><%= image_tag ("instagram.png") %></a>
+                    <a href="http://github.com/Aspekt112" target="_blank"><%= image_tag ("github.png") %></a>
+                    <a href="http://facebook.com/artem.nurmatov" target="_blank"><%= image_tag ("facebook.png") %></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<footer>
+    <p>&copy 2014 <a href="nurmatov.net">Nurmatov.net</a> Нурматов А.Т.</p>
+</footer>
+</body>
+</html>
