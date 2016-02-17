@@ -2,15 +2,25 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @font-face {
-    font-family:'PF Isotext Pro';
-    src: url(PFIsotextProRegular.ttf); 
+	font-family:'PF Isotext Pro';
+	src: url(PFIsotextProRegular.ttf); 
 } 
-/* font_path("PFIsotextProRegular.ttf");*/
 
 body {
 	font: normal 17px/26px 'PF Isotext Pro','Helvetica Neue', Helvetica, Arial, sans-serif;
 	background: #0e0e0e;
 	margin: 0;
+	color: #c2c2c2;
+}
+
+.mainContainer {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+.mainContainer div { 
+	position: absolute;
 }
 
 a {
@@ -30,13 +40,6 @@ a:hover {
 
 ul {
 	list-style: none;
-}
-
-.mainContainer {
-	position: relative;
-}
-.mainContainer div { 
-	position: absolute;
 }
 
 #leftContainer {
@@ -232,22 +235,6 @@ ul {
 .visible ul#contacts li:hover a {
 	color: #FF0800;
 	cursor: auto;
-}
-
-#index {
-	/*display: none;*/
-}
-
-#files {
-	/*display: none;*/
-}
-
-#diaryPage {
-	/*display: none;*/
-}
-
-#contactPage {
-	/*display: none;*/
 }
 
 footer p {

@@ -1,0 +1,104 @@
+.mainDiary {
+	height: 100%;
+	position: relative;
+}
+
+.articles {
+	text-align: right;
+	width: 60%;
+	height: 100%;
+	margin: 0 0 0 15%;
+}
+
+.articles p {
+	text-align: left;
+}
+
+.articles a {
+	background: rgba(200, 200, 200, 0.1);
+	padding: 3px 5px 2px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;	
+}
+
+.articles a:last-child {
+	color: #000000;
+	margin: 0 30px 0 0;
+}
+.articles a:hover {
+	background: none;
+}
+
+.back {
+	top: 0;
+	margin: 0;
+	background-color: #1d1d1d;
+	width: 10%;
+	height: 100%;
+	position: fixed;
+}
+
+.back a {
+	color: #303030;
+	letter-spacing: 20px;
+	opacity: 0.7; 
+	font-size: 25vh;
+	display: block;
+	margin: 70vh 0 0 0;
+	-moz-transform: rotate(-90deg);
+	-webkit-transform: rotate(-90deg);
+	-o-transform: rotate(-90deg);
+}
+
+.back a:hover {
+	text-decoration: none;
+	color: #404040;
+	transition: all 0.5s;
+}
+/*
+ul.menu {
+	margin: 0 0 0 140vh; 
+	position: relative;
+	height: 30px; 
+	width: 40%;
+}
+
+ul.menu li {
+	float: left;
+	list-style: none;
+}
+ul.menu li a {
+	color: white;
+	display: block;
+	padding: 10px 0 0 0 ;
+	text-decoration: none;
+}
+ul.menu li ul {
+ 	display: none;
+	padding-left: -10px;
+}
+ul.menu li:hover ul {
+	display: block;
+	position: absolute;
+}
+ul.menu ul li  {
+	background: #c2c2c2;
+	padding: 6px 12px 0px;
+}
+ul.menu ul li:hover  {
+	background: #707070;
+	padding: 6px 12px 0px;
+}
+ul.menu ul li a {
+	color: black;
+	padding: 6px 12px 0px;
+}
+ul.menu ul li a:hover {
+	background: #707070;
+	color: black;
+	padding: 6px 12px 0px;
+}
+ul.menu li:hover ul li a {
+	padding: 0px 0 8px;
+}
+*/
