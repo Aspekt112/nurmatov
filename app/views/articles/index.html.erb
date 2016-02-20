@@ -19,6 +19,29 @@
 		</div>
 		<button type="button" class=""><%= link_to 'Create', new_article_path %></button>
 		<div class="back"><%= link_to 'BACK', controller: 'about' %></div>
+
+		<div class="user">
+			<%= image_tag("github.png") %>
+			<% if signed_in? %>
+				<a href="#">Account<b></b></a>
+				<%= link_to "Profile", current_user %>
+				<%= link_to "Settings", '#' %>
+				<%= link_to "Sign out", signout_path, method: "delete" %>
+			<% else %>
+				<%= form_for(:session, url: sessions_path) do |f| %>
+
+						<%= f.label :email %>
+						<%= f.text_field :email %>
+
+						<%= f.label :password %>
+						<%= f.password_field :password %>
+
+						<%= f.submit "Sign in" %>
+
+						<p><%= link_to "Sign up now!", signup_path %></p>
+				<% end %>
+			<% end %>		
+		</div>
 	</div>
 </body>
 </html>
